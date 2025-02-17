@@ -19,7 +19,6 @@ window.onmousemove = e => {
     let percentage = (mouseDelta / maxDelta) * -100;
     let nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
 
-    // Set limits to prevent excessive scrolling
     nextPercentage = Math.max(-100, Math.min(0, nextPercentage));
 
     track.dataset.percentage = nextPercentage;
